@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Playfair Display', serif;
+}
+
+:root {
+  --brown-red: #4B2E1E;
+  --brown-red-bg: #E2B63B;
+  --brown-red-accent: #D4AF37;
+  --brown-red-soft-bg: #FFFDF7;
+  --brown-red-muted: #EAE0D5;
+}
+
+.brown-red {
+  color: var(--brown-red);
+}
+
+.brown-red-bg {
+  background-color: var(--brown-red-bg);
+}
+
+.brown-red-accent {
+  color: var(--brown-red-accent);
+}
+
+.brown-red-soft-bg {
+  background-color: var(--brown-red-soft-bg);
+}
+
+.brown-red-muted {
+  color: var(--brown-red-muted);
+}
+
+.brown-red-border-bg {
+  border-color: var(--brown-red-bg) !important;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Tailwind aur custom classes ke saath aapka design ab sahi chalega */
