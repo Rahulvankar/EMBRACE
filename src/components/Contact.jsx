@@ -15,7 +15,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="font-serif py-20">
+        <div className="font-serif py-5 md:py-20">
             {/* Hero Section */}
             <section className="relative pb-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

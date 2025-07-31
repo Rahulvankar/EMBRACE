@@ -26,7 +26,7 @@ const SecondSection = () => {
                         transition={{ duration: 0.5 }}
                     >
                         {/* Gold Shadow Box */}
-                        <div className="absolute top-1 left-4 w-full h-full bg-[#e1c78f] rounded-xl shadow-2xl z-0" />
+                        <div className="absolute top-1 left-4 w-full h-full bg-[#E2B63B] rounded-xl shadow-2xl z-0" />
 
                         {/* Badge */}
                         <div className="absolute -top-4 -left-4 bg-[#8b3e2e] text-white text-xs px-5 py-1 rounded-full z-20 shadow-md tracking-widest">
@@ -86,8 +86,8 @@ const SecondSection = () => {
                     </p>
 
                     <button className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-[#9d2b1f] bg-transparent text-[#9d2b1f] hover:bg-[#9d2b1f] hover:text-white transition-all duration-300 text-sm font-semibold shadow-md">
-                        <FaBroadcastTower className="text-base" />
-                        Tap to Tune In
+                        {/* <FaBroadcastTower className="text-base" /> */}
+                    Contact Us
                     </button>
                 </motion.div>
             </div>

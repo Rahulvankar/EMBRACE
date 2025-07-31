@@ -61,11 +61,11 @@ const InstragamFeed = () => {
         </div>
 
         {/* Right: Grid Gallery */}
-        <div className="flex-[7] w-full max-w-full items-center relative">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4B2E1E] mb-4 text-center md:text-left">
+        <div className="flex-[7] w-full max-w-full items-center relative mt-16 md:mt-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fff] md:text-[#4B2E1E] mb-4 text-center md:text-left">
             Follow Us on Instagram
           </h2>
-          <p className="text-[#4B2E1E] mb-6 text-center md:text-left text-sm sm:text-base">
+          <p className="text-[#fff] md:text-[#4B2E1E] mb-6 text-center md:text-left text-sm sm:text-base">
             Real stories, real transformations. Explore our daily wellness journey.
           </p>
 
