@@ -2,17 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaBroadcastTower } from 'react-icons/fa';
 import { MdSpa } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 const SecondSection = () => {
     return (
-        <section className="relative py-20 px-4 bg-[#fffaf3] text-[#41110a] overflow-hidden font-serif">
+        <section className="relative py-20 px-4 bg-[var(--brown-soft-bg)] text-primary overflow-hidden font-serif">
             {/* Sparkle Background Pattern */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="w-full h-full bg-[radial-gradient(#decaa3_1px,transparent_1px)] [background-size:24px_24px] opacity-20 animate-pulse"></div>
             </div>
 
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-16 relative z-10">
-                {/* Left Side - Layered Box */}
                 <motion.div
                     initial={{ x: -100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
@@ -26,15 +26,15 @@ const SecondSection = () => {
                         transition={{ duration: 0.5 }}
                     >
                         {/* Gold Shadow Box */}
-                        <div className="absolute top-1 left-4 w-full h-full bg-[#E2B63B] rounded-xl shadow-2xl z-0" />
+                        <div className="absolute top-1 left-4 w-full h-full bg-[var(--brown-yellow-bg)] rounded-xl shadow-2xl z-0" />
 
                         {/* Badge */}
-                        <div className="absolute -top-4 -left-4 bg-[#8b3e2e] text-white text-xs px-5 py-1 rounded-full z-20 shadow-md tracking-widest">
+                        <div className="absolute -top-4 -left-4 bg-[var(--brown-red)] text-white text-xs px-5 py-1 rounded-full z-20 shadow-md tracking-widest">
                             FEATURED
                         </div>
 
                         {/* Front Box */}
-                        <div className="relative w-full h-full bg-white rounded-xl border-2 border-[#8b3e2e] overflow-hidden shadow-xl z-10 flex flex-col justify-center items-center text-center px-6 py-8">
+                        <div className="relative w-full h-full bg-white rounded-xl border-2 border-[var(--brown-red)] overflow-hidden shadow-xl z-10 flex flex-col justify-center items-center text-center px-6 py-8">
                             <div className="text-[#9d2b1f] text-3xl mb-4 flex gap-1">
                                 <MdSpa />
                                 <MdSpa />
@@ -60,7 +60,6 @@ const SecondSection = () => {
                     </motion.div>
                 </motion.div>
 
-                {/* Right Side - Text */}
                 <motion.div
                     initial={{ y: 40, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
@@ -68,26 +67,31 @@ const SecondSection = () => {
                     viewport={{ once: true }}
                     className="text-center md:text-left"
                 >
-                    <p className="text-lg tracking-widest uppercase text-[#9d2b1f] border-b-2 inline-block border-[#9d2b1f] mb-4">
+                    <p className="text-lg tracking-widest uppercase text-[var(--brown-secondary)] border-b-2 inline-block border-[var(--brown-red)] mb-4">
                         About Us
                     </p>
 
-                    <h2 className="text-[34px] md:text-[42px] leading-tight font-serif italic text-[#5E3D1F] mb-6">
-                        Pioneering In-City Wellness
+                    <h2 className="text-[34px] md:text-[42px] leading-tight font-serif italic text-[var(--brown-red)] mb-6">
+                        Pioneering In-About Embrace (Intro)
                     </h2>
 
-                    <p className="text-gray-800 text-[16px] md:text-[18px] leading-relaxed mb-6">
-                        <span className="text-[#9d2b1f] font-medium">
-                            Embrace is where traditional wisdom meets modern convenience
-                        </span>{' '}
-                        — a sanctuary offering a touch-led holistic approach to healing. Unlike
-                        fleeting retreats, Embrace brings balance into your everyday life. It’s more than
-                        a spa — it’s your space to harmonise, heal and reconnect.
+                    <p className="text-[var(--brown-red)] text-[16px] md:text-[18px] leading-relaxed mb-6">
+                        <p>
+                            At <span className='text-[var(--brown-secondary)] font-bold'>Embrace</span>, we believe that wellness is more than the absence
+                            of illness — it’s the art of living vibrantly.
+                        </p>
+                        <p>Our multidisciplinary team of doctors, physiotherapists,
+                            nutritionists, and lifestyle coaches crafts personalised programs
+                            that address not just the physical body, but also the emotional
+                            and mental wellbeing of every woman who walks through our
+                            doors.</p>
+                        <p>From the delicate care of pregnancy to the empowering journey
+                            of post-cancer recovery, we’re here to guide, support, and
+                            inspire you every step of the way.</p>
                     </p>
 
-                    <button className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-[#9d2b1f] bg-transparent text-[#9d2b1f] hover:bg-[#9d2b1f] hover:text-white transition-all duration-300 text-sm font-semibold shadow-md">
-                        {/* <FaBroadcastTower className="text-base" /> */}
-                    Contact Us
+                    <button className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-[var(--brown-secondary)] bg-transparent text-[var(--brown-secondary)] hover:bg-[#9d2b1f] hover:text-white transition-all duration-300 text-sm font-semibold shadow-md">
+                        <Link to="/about"> More About </Link>
                     </button>
                 </motion.div>
             </div>

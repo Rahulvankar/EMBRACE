@@ -8,11 +8,11 @@
 
 :root {
   --brown-red: #4B2E1E;
-  --brown-red-bg: #E2B63B;
-  --brown-red-accent: #D4AF37;
-  --brown-red-soft-bg: #FFFDF7;
-  --brown-red-muted: #EAE0D5;
+  --brown-secondary: #9d2b1f;
+  --brown-yellow-bg: #E2B63B;
+  --brown-soft-bg: #FFFDF7;
 }
+
 
 .brown-red {
   color: var(--brown-red);

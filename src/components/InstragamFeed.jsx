@@ -35,9 +35,9 @@ const InstragamFeed = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden font-sans py-24 bg-[#E2B63B]">
+    <section className="relative overflow-hidden font-sans py-24 bg-[var(--brown-yellow-bg)]">
       {/* Bottom Layered Background */}
-      <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[#4B2E1E] rounded-t-[100px] z-0"></div>
+      <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[var(--brown-red)] rounded-t-[100px] z-0"></div>
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-10">
@@ -61,11 +61,11 @@ const InstragamFeed = () => {
         </div>
 
         {/* Right: Grid Gallery */}
-        <div className="flex-[7] w-full max-w-full items-center relative mt-16 md:mt-0">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#fff] md:text-[#4B2E1E] mb-4 text-center md:text-left">
+        <div className="flex-[7] w-full max-w-full items-center relative">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center md:text-left">
             Follow Us on Instagram
           </h2>
-          <p className="text-[#fff] md:text-[#4B2E1E] mb-6 text-center md:text-left text-sm sm:text-base">
+          <p className="text-white mb-6 text-center md:text-left text-sm sm:text-base">
             Real stories, real transformations. Explore our daily wellness journey.
           </p>
 
@@ -83,7 +83,7 @@ const InstragamFeed = () => {
             </div>
 
             {/* Image 2 */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg hidden md:block">
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img
                 src={galleryImages[1]}
                 alt="Instagram 2"
@@ -92,7 +92,7 @@ const InstragamFeed = () => {
             </div>
 
             {/* Image 3 */}
-            <div className="relative rounded-xl overflow-hidden shadow-lg hidden md:block">
+            <div className="relative rounded-xl overflow-hidden shadow-lg">
               <img
                 src={galleryImages[2]}
                 alt="Instagram 3"
@@ -111,7 +111,7 @@ const InstragamFeed = () => {
                   .map((img, index) => (
                     <div
                       key={index}
-                      className="w-1/5 sm:w-24 h-20 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-2 sm:border-4 border-[#E2B63B] cursor-pointer"
+                      className="w-20 sm:w-24 h-20 sm:h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-lg border-2 sm:border-4 border-[var(--brown-yellow-bg)] cursor-pointer"
                       onClick={() => handleImageClick(img)}
                     >
                       <img
@@ -126,7 +126,7 @@ const InstragamFeed = () => {
 
           {/* Follow Button */}
           <div className="mt-6 sm:mt-8 text-center md:text-left">
-            <button className="px-5 py-2 border border-[#b8860b] text-white hover:bg-[#b8860b] hover:text-white transition-all duration-300 rounded-full font-medium">
+            <button className="px-5 py-2 border border-[var(--brown-yellow-bg)] text-white hover:bg-[#b8860b] hover:text-white transition-all duration-300 rounded-full font-medium">
               Follow @yourpage
             </button>
           </div>

@@ -15,7 +15,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="font-serif py-5 md:py-20">
+        <div className="font-serif py-20">
             {/* Hero Section */}
             <section className="relative pb-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -33,7 +33,7 @@ const Contact = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {/* Contact Form */}
-                        <div className="text-[#4B2E1E]  rounded-lg shadow p-8">
+                        <div className="text-[var(--brown-red)]  rounded-lg shadow p-8">
                             <h2 className="text-3xl font-bold mb-6">
                                 Book Your Consultation
                             </h2>
@@ -115,7 +115,7 @@ const Contact = () => {
 
                                 <button
                                     type="submit"
-                                    className="bg-[#E2B63B] hover:bg-[#d2a631] text-white font-semibold py-3 px-6 rounded-lg w-full transition-all"
+                                    className="bg-[var(--brown-yellow-bg)] hover:bg-[var(--brown-red)] text-white font-semibold py-3 px-6 rounded-lg w-full transition-all"
                                 >
                                     Send Message
                                 </button>
@@ -124,44 +124,44 @@ const Contact = () => {
 
                         {/* Contact Info */}
                         <div>
-                            <div className="bg-[#4B2E1E] text-white rounded-lg p-8 mb-8">
-                                <h3 className="text-2xl font-bold mb-6 text-[#E2B63B]">
+                            <div className="bg-[var(--brown-red)] text-white rounded-lg p-8 mb-8">
+                                <h3 className="text-2xl font-bold mb-6 text-[var(--brown-yellow-bg)]">
                                     Get In Touch
                                 </h3>
                                 <div className="space-y-6">
                                     <div className="flex items-start space-x-4">
-                                        <FaMapMarkerAlt className="w-6 h-6 text-[#E2B63B] mt-1" />
+                                        <FaMapMarkerAlt className="w-6 h-6 text-[var(--brown-yellow-bg)] mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Address</h4>
                                             <p>123 Wellness Street<br />Mumbai, India</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start space-x-4">
-                                        <FaPhoneAlt className="w-6 h-6 text-[#E2B63B] mt-1" />
+                                        <FaPhoneAlt className="w-6 h-6 text-[var(--brown-yellow-bg)] mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Phone</h4>
                                             <p>+91 9876543210</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start space-x-4">
-                                        <FaEnvelope className="w-6 h-6 text-[#E2B63B] mt-1" />
+                                        <FaEnvelope className="w-6 h-6 text-[var(--brown-yellow-bg)] mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Email</h4>
                                             <p>contact@embracewellness.com</p>
                                         </div>
                                     </div>
-                                    <h3 className="text-xl font-bold mb-4 text-[#E2B63B]">Follow Us</h3>
+                                    <h3 className="text-xl font-bold mb-4 text-[var(--brown-yellow-bg)]">Follow Us</h3>
                                     <div className="flex justify-start space-x-4 mb-6 text-white">
-                                        <a href="#" className="hover:text-[#E2B63B] transition-colors">
+                                        <a href="#" className="hover:text-[var(--brown-yellow-bg)] transition-colors">
                                             <FaFacebookF className="w-6 h-6" />
                                         </a>
-                                        <a href="#" className="hover:text-[#E2B63B] transition-colors">
+                                        <a href="#" className="hover:text-[var(--brown-yellow-bg)] transition-colors">
                                             <FaTwitter className="w-6 h-6" />
                                         </a>
-                                        <a href="#" className="hover:text-[#E2B63B] transition-colors">
+                                        <a href="#" className="hover:text-[var(--brown-yellow-bg)] transition-colors">
                                             <FaInstagram className="w-6 h-6" />
                                         </a>
-                                        <a href="#" className="hover:text-[#E2B63B] transition-colors">
+                                        <a href="#" className="hover:text-[var(--brown-yellow-bg)] transition-colors">
                                             <FaYoutube className="w-6 h-6" />
                                         </a>
                                     </div>
@@ -169,7 +169,7 @@ const Contact = () => {
                             </div>
 
                             {/* Opening Hours */}
-                            <div className="bg-[#E2B63B] text-[#4B2E1E] rounded-lg p-8 mb-8">
+                            <div className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] rounded-lg p-8 mb-8">
                                 <h3 className="text-2xl font-bold mb-6">Opening Hours</h3>
                                 <div className="space-y-3">
                                     <div className="flex justify-between">
