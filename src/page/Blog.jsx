@@ -1,66 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../components/Footer";
 import Home from "../components/Blog-Home";
+import { HeadProvider, Title, Meta } from "react-head";
 
+const categories = [
+    "All",
+    "Women’s Health & Wellness",
+    "Nutrition & Lifestyle",
+    "Emotional Wellbeing",
+    "Success Stories & Inspiration"
+];
+
+// Example posts
 const blogPosts = [
     {
         id: 1,
-        title: "MyCase, Transforming Legal Practice",
+        title: "Healing After Cancer Treatment",
         description:
-            "Our commitment to providing value extends beyond the features of our products or services. We believe in fostering long-term partnerships by ensuring that our pricing plans. Many legal professionals find it difficult to accurately keep track of all case-related time, which often results in billable time slipping through the tracks and revenue left on the table.",
+            "Discover strategies to restore physical and mental health after cancer recovery.",
         date: "22 Dec 2023",
-        tags: ["News", "Inspiration"],
-        author: {
-            name: "Cody Fisher",
-            avatar:
-                "https://randomuser.me/api/portraits/men/45.jpg",
-        },
+        tags: ["Women’s Health & Wellness"],
         image: "/image/inst1.jpg",
         featured: true,
     },
     {
         id: 2,
-        title: "MyCase: Transforming Legal Practice",
-        description:
-            "Embark on a journey through the innovation that is MyCase, redefining how legal",
-        date: "22 Dec 2023",
-        tags: ["News", "Inspiration"],
-        author: {
-            name: "Cody Fisher",
-            avatar:
-                "https://randomuser.me/api/portraits/men/45.jpg",
-        },
+        title: "Nutrition Tips for Long-Term Wellness",
+        description: "Practical lifestyle changes to boost your recovery journey.",
+        date: "20 Dec 2023",
+        tags: ["Nutrition & Lifestyle"],
         image: "/image/inst2.jpg",
     },
     {
         id: 3,
-        title: "How MyCase: Addresses Legal Challenges",
-        description:
-            "MyCase stands out through its unique features and user-centric design.",
-        date: "21 Dec 2023",
-        tags: ["News", "Inspiration"],
-        author: {
-            name: "Guy Hawkins",
-            avatar:
-                "https://randomuser.me/api/portraits/men/46.jpg",
-        },
+        title: "Overcoming Anxiety During Recovery",
+        description: "Learn how emotional support improves healing and confidence.",
+        date: "18 Dec 2023",
+        tags: ["Emotional Wellbeing"],
         image: "/image/inst3.jpg",
     },
     {
         id: 4,
-        title: "MyCase: Transforming Legal Practice",
+        title: "Shalini’s Recovery Journey",
         description:
-            "Embark on a journey through the innovation that is MyCase, redefining how legal",
-        date: "22 Dec 2023",
-        tags: ["News", "Inspiration"],
-        author: {
-            name: "Floyd Miles",
-            avatar:
-                "https://randomuser.me/api/portraits/men/47.jpg",
-        },
+            "A story of resilience and strength after completing our program.",
+        date: "15 Dec 2023",
+        tags: ["Success Stories & Inspiration"],
         image: "/image/inst4.jpg",
     },
 ];
+
 
 const Tag = ({ label }) => (
     <span className="text-xs font-semibold bg-gray-200 text-gray-700 rounded-full px-3 py-1 mr-2">
@@ -69,8 +58,18 @@ const Tag = ({ label }) => (
 );
 
 const BlogPage = () => {
+    const [selectedCategory, setSelectedCategory] = useState("All");
+
+    const filteredPosts =
+        selectedCategory === "All"
+            ? blogPosts
+            : blogPosts.filter((post) => post.tags.includes(selectedCategory));
     return (
         <>
+            <HeadProvider>
+                <Title> Women’s Health Blog | Embrace Wellness Resources</Title>
+                <Meta name="description" content="Explore expert insights on women’s health, from pregnancy care and cancer recovery to menopause and lifestyle transformation. Practical tips, research-based guidance, and inspiring stories." />
+            </HeadProvider>
             <Home />
             <div className="relative bg-[var(--brown-soft-bg)]">
                 <div className="absolute inset-0 z-0 pointer-events-none">
@@ -107,33 +106,57 @@ const BlogPage = () => {
                             </div>
                         ))}
 
-                    {/* Other Posts */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative z-10">
-                        {blogPosts
-                            .filter((post) => !post.featured)
-                            .map(({ id, title, description, date, tags, image }) => (
-                                <div
-                                    key={id}
-                                    className="bg-[var(--brown-red)] rounded-lg shadow-md overflow-hidden"
+                    <div className="py-12 px-6 ">
+                        {/* Category Buttons */}
+                        <div className="flex flex-wrap justify-center gap-4 mb-10">
+                            {categories.map((cat) => (
+                                <button
+                                    key={cat}
+                                    onClick={() => setSelectedCategory(cat)}
+                                    className={`px-6 py-2 rounded-full font-semibold transition ${selectedCategory === cat
+                                            ? "bg-[var(--brown-red)] text-white"
+                                            : "bg-gray-200 text-gray-800"
+                                        }`}
                                 >
-                                    <img
-                                        src={image}
-                                        alt={title}
-                                        className="w-full h-60 object-cover"
-                                    />
-                                    <div className="p-6 text-white">
-                                        <div className="flex flex-wrap mb-2">
-                                            {tags.map((tag) => (
-                                                <Tag key={tag} label={tag} />
-                                            ))}
-                                            <span className="text-xs ml-auto">{date}</span>
-                                        </div>
-                                        <h3 className="text-lg font-semibold mb-2 tracking-widest">{title}</h3>
-                                        <p className="text-sm mb-4 tracking-widest">{description}</p>
-                                        {/* Author info removed as per your last code */}
-                                    </div>
-                                </div>
+                                    {cat}
+                                </button>
                             ))}
+                        </div>
+
+                        {/* Other Posts */}
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative z-10">
+                            {filteredPosts
+                                .filter((post) => !post.featured)
+                                .map(({ id, title, description, date, tags, image }) => (
+                                    <div
+                                        key={id}
+                                        className="bg-[var(--brown-red)] rounded-lg shadow-md overflow-hidden"
+                                    >
+                                        <img
+                                            src={image}
+                                            alt={title}
+                                            className="w-full h-60 object-cover"
+                                        />
+                                        <div className="p-6 text-white">
+                                            <div className="flex flex-wrap mb-2">
+                                                {tags.map((tag) => (
+                                                    <span
+                                                        key={tag}
+                                                        className="bg-[var(--brown-red-bg)] text-xs px-2 py-1 rounded-full mr-2"
+                                                    >
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                                <span className="text-xs ml-auto">{date}</span>
+                                            </div>
+                                            <h3 className="text-lg font-semibold mb-2 tracking-widest">
+                                                {title}
+                                            </h3>
+                                            <p className="text-sm mb-4 tracking-widest">{description}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                        </div>
                     </div>
                 </div>
             </div >

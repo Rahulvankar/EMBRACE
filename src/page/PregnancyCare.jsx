@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../components/Footer";
-import { HeadProvider, Title } from "react-head";
-import { Meta } from "react-router-dom";
+import { HeadProvider, Title, Meta } from "react-head";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },

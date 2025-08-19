@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Consultation = () => {
     return (
@@ -59,12 +60,12 @@ const Consultation = () => {
                         viewport={{ once: true }}
                         className="flex flex-col sm:flex-row justify-center gap-4"
                     >
-                        <a
-                            href="/contact"
+                        <Link
+                            to="/contact"
                             className="bg-[var(--brown-yellow-bg)] text-white border border-[var(--brown-red-border)] px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform"
                         >
                             Book Consultation
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

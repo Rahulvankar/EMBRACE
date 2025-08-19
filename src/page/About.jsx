@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { MdEmail, MdOutlineStarBorderPurple500 } from "react-icons/md";
 import { FaPhoneAlt, FaUsers } from "react-icons/fa";
 import AboutHero from "../components/AboutHero";
+import { Link } from "react-router-dom";
 
 const container = {
     hidden: { opacity: 0 },
@@ -489,12 +490,12 @@ const About = () => {
                             viewport={{ once: true }}
                             className="flex flex-col sm:flex-row justify-center gap-4"
                         >
-                            <a
-                                href="/contact"
+                            <Link
+                                to="/contact"
                                 className="bg-[var(--brown-yellow-bg)] text-white border border-[var(--brown-red-border)] px-8 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-transform"
                             >
                                 Book Consultation
-                            </a>
+                            </Link>
                         </motion.div>
                     </div>
                 </section>

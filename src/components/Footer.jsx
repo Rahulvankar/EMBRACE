@@ -21,21 +21,48 @@ const Footer = () => {
         <div>
           <h4 className="text-xl font-semibold text-[var(--brown-yellow-bg)] mb-4 uppercase">Quick Links</h4>
           <ul className="space-y-3 text-[16px] text-gray-200">
-            <li><Link to="#" className="hover:text-[var(--brown-yellow-bg)] transition">Home</Link></li>
-            <li><Link to="#" className="hover:text-[var(--brown-yellow-bg)] transition">Programs</Link></li>
-            <li><Link to="#" className="hover:text-[var(--brown-yellow-bg)] transition">About Us</Link></li>
-            <li><Link to="#" className="hover:text-[var(--brown-yellow-bg)] transition">Client Stories</Link></li>
-            <li><Link to="#" className="hover:text-[var(--brown-yellow-bg)] transition">Book Consultation</Link></li>
+            <li><Link to="/" className="hover:text-[var(--brown-yellow-bg)] transition">Home</Link></li>
+            <li><Link to="/about" className="hover:text-[var(--brown-yellow-bg)] transition">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-[var(--brown-yellow-bg)] transition">Services</Link></li>
+            <li><Link to="/blog" className="hover:text-[var(--brown-yellow-bg)] transition">Blog</Link></li>
+            <li><Link to="/testimonials" className="hover:text-[var(--brown-yellow-bg)] transition">Testimonials</Link></li>
+            <li><Link to="/contact" className="hover:text-[var(--brown-yellow-bg)] transition">Book Consultation</Link></li>
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-xl font-semibold text-[var(--brown-yellow-bg)] mb-4 uppercase">Contact Us</h4>
-          <p className="text-[15px] text-gray-200 mb-2">Email: contact@embracewellness.com</p>
-          <p className="text-[15px] text-gray-200 mb-2">Phone: +91 9876543210</p>
-          <p className="text-[15px] text-gray-200">Location: Mumbai, India</p>
+          <h4 className="text-xl font-semibold text-[var(--brown-yellow-bg)] mb-4 uppercase">
+            Contact Us
+          </h4>
+
+          {/* Email (click to open default mail app) */}
+          <a
+            href="mailto:mt.embrace.wellness@gmail.com"
+            className="text-[15px] text-gray-200 mb-2 block hover:underline"
+          >
+            Email: mt.embrace.wellness@gmail.com
+          </a>
+
+          {/* Phone (click to dial) */}
+          <a
+            href="tel:+919313864058"
+            className="text-[15px] text-gray-200 mb-2 block hover:underline"
+          >
+            Phone: +91 93138 64058
+          </a>
+
+          {/* Address (optional: click to open Google Maps) */}
+          <a
+            href="https://maps.google.com/?q=304 serenity square, Navrang six road, Navrangpura, Ahmedabad-380009"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[15px] text-gray-200 block hover:underline"
+          >
+            304 serenity square, Navrang six road, Navrangpura, Ahmedabad-380009
+          </a>
         </div>
+
 
         {/* Stay Connected */}
         <div>

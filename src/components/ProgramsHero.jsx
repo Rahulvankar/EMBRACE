@@ -19,12 +19,7 @@ const ProgramsHero = () => {
                     Explore personalized wellness programs designed to support
                     your body, mind, and spirit at every stage of life.
                 </p>
-                <a
-                    href="#programs-list"
-                    className="px-6 py-3 border-2 border-[var(--brown-yellow-bg)] text-[var(--brown-yellow-bg)] hover:bg-[var(--brown-yellow-bg)] hover:text-black transition rounded-full font-semibold text-lg"
-                >
-                    VIEW PROGRAMS
-                </a>
+               
             </div>
         </section>
     )

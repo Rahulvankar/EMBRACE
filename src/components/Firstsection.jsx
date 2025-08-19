@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/effect-fade'
 import { Autoplay, EffectFade } from 'swiper/modules'
+import { Link } from 'react-router-dom'
 
 const slides = [
     {
@@ -47,12 +48,12 @@ const HeroSlider = () => {
                                 <p className="text-lg md:text-2xl text-white max-w-2xl mb-6">
                                     {slide.subtitle}
                                 </p>
-                                <a
-                                    href="#contact"
+                                <Link
+                                    to="/contact"
                                     className="px-6 py-3 border-2 border-[var(--brown-yellow-bg)] text-[var(--brown-yellow-bg)] hover:bg-[var(--brown-red-bg)] hover:text-[var(--brown-yellow-bg)] transition rounded-full font-semibold text-lg"
                                 >
                                     BOOK AN APPOINTMENT
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </SwiperSlide>

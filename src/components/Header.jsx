@@ -35,6 +35,9 @@ export default function Header() {
           className={`hidden md:flex items-center space-x-6 ${scrolled ? "text-black" : "text-white"
             }`}
         >
+          <Link to="/" className="hover:text-[#C0A062]">
+            Home
+          </Link>
           <Link to="/about" className="hover:text-[#C0A062]">
             About Us
           </Link>

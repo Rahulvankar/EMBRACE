@@ -6,33 +6,28 @@ import "slick-carousel/slick/slick-theme.css";
 const TrustSignals = () => {
   const reviews = [
     { 
-      text: "Amazing results! I saw visible improvement within just a few weeks and my confidence has skyrocketed. Highly recommend to anyone considering this service.", 
-      author: "Jane D." 
+      text: "After my cancer treatment, I didn’t think I’d ever feel strong again. Embrace gave me back my confidence", 
+      author: "Client Story" 
     },
     { 
-      text: "Professional and effective service. The staff was knowledgeable, friendly, and always ready to answer my questions in detail.", 
-      author: "Mark T." 
+      text: "The pregnancy program was like having a family guiding me — I felt safe, supported, and cared for every day.", 
+      author: "Client Story." 
     },
     { 
-      text: "Exceeded all my expectations! The process was smooth and the results were better than I ever imagined. Definitely worth the investment.", 
-      author: "Sophia L." 
+      text: "Menopause no longer feels like a struggle. I feel balanced, active, and full of energy again.", 
+      author: "Cancer Rehab" 
     },
     { 
-      text: "Friendly staff and great outcomes. They made me feel comfortable from start to finish, and I’m thrilled with the transformation.", 
-      author: "Chris P." 
+      text: "The personalised pregnancy care made me feel confident throughout. I was guided with love and professionalism", 
+      author: "Priya, Pregnancy Care" 
     },
     { 
-      text: "Life-changing experience for me. The results have been nothing short of incredible, and I’m so grateful for the positive impact on my life.", 
-      author: "Emily R." 
+      text: "Menopause became manageable thanks to Embrace. My sleep improved, and I regained my energy.", 
+      author: "Neeta, Menopause Wellness" 
     },
     { 
-      text: "From the first consultation to the final result, the entire journey was handled with care and expertise. I felt valued and understood every step of the way.", 
-      author: "Daniel W." 
+      text: "I lost weight, gained strength, and most importantly, built a lifestyle I can maintain.” – Rupal, Body Transformation.", 
     },
-    { 
-      text: "Top-notch service! They explained everything in detail, kept me updated, and delivered results that speak for themselves.", 
-      author: "Priya S." 
-    }
   ];
 
   const settings = {
@@ -54,7 +49,7 @@ const TrustSignals = () => {
   };
 
   return (
-    <section className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] py-24 mb-2 px-4">
+    <section className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] py-24  px-4">
       <div className="max-w-7xl mx-auto mb-3">
         <h2 className="text-3xl font-bold mb-8 text-center text-[var(--brown-red)]">
           Customer Reviews
