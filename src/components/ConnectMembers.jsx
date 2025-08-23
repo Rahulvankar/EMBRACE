@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 const testimonials = [
   {
-    name: 'Aarti',
+    name: 'Rahul',
     image: 'https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg',
     text: '"Embrace didn’t just help me recover — they gave me my life back. I feel stronger, happier, and ready to take on the worldagain." – Aarti, Cancer Rehabilitation Client',
   },
