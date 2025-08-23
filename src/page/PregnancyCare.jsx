@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../components/Footer";
 import { HeadProvider, Title, Meta } from "react-head";
+import { Link } from "react-router-dom";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -21,9 +22,10 @@ const PregnancyCare = () => {
                 <section
                     className="relative h-[100vh] flex flex-col justify-center items-center text-white text-center"
                     style={{
-                        backgroundImage: `url(/image/pregnancyCare.jpeg)`,
+                        backgroundImage: `url(/image/pregnancyCare.jpg)`,
                         backgroundSize: "cover",
-                        backgroundPosition: "center"
+                        backgroundPosition: "center 50px",
+                        backgroundRepeat: "no-repeat"
                     }}
                 >
                     <div className="absolute inset-0 bg-black/50"></div>
@@ -31,7 +33,7 @@ const PregnancyCare = () => {
                         initial="hidden"
                         animate="visible"
                         variants={fadeInUp}
-                        className="text-5xl font-extrabold relative z-10 mb-4 bg-gradient-to-r from-[var(--brown-yellow-bg)] to-[#cfa348] bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl font-extrabold relative z-10 mb-4 bg-gradient-to-r from-[var(--brown-yellow-bg)] to-[#cfa348] bg-clip-text text-transparent"
                     >
                         Nurturing You and Your Baby, Every Step of the Way
                     </motion.h1>
@@ -40,7 +42,7 @@ const PregnancyCare = () => {
                         animate="visible"
                         variants={fadeInUp}
                         transition={{ delay: 0.2 }}
-                        className="text-lg max-w-2xl relative z-10"
+                        className="text-1xl md:text-lg max-w-2xl relative z-10"
                     >
                         Our Pregnancy Care Program ensures your journey to motherhood is healthy,
                         joyful, and fully supported — from your first trimester through postpartum recovery.
@@ -50,10 +52,12 @@ const PregnancyCare = () => {
                         animate="visible"
                         variants={fadeInUp}
                         transition={{ delay: 0.4 }}
-                        className="flex gap-4 mt-6 relative z-10"
+                        className="md:flex gap-4 mt-6 relative z-10"
                     >
-                        <button className="bg-gradient-to-r from-[var(--brown-yellow-bg)] to-[#cfa348] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-                            Book Your Consultation
+                        <button className="bg-gradient-to-r my-2 md:my-0 from-[var(--brown-yellow-bg)] to-[#cfa348] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+                            <Link to="/contact" className="text-white">
+                                Book Your Consultation
+                            </Link>
                         </button>
                         <a
                             href="/pdf/PregnancyCareProgram.pdf" // put your PDF file path here
@@ -110,7 +114,7 @@ const PregnancyCare = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition"
+                                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition mx-2"
                             >
                                 <p className="text-gray-800">{benefit}</p>
                             </motion.div>
@@ -124,7 +128,7 @@ const PregnancyCare = () => {
                         <div className="w-full h-full bg-[radial-gradient(circle,#dab370_1px,transparent_1px)] [background-size:25px_25px] opacity-20"></div>
                     </div>
                     <h2 className="text-3xl font-bold text-center mb-8">Who Can Benefit?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-12 text-gray-800 w-[50%] mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-12 text-gray-800 w-[80%] md:w-[50%] mx-auto">
                         <ul className="space-y-4">
                             <li className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-[#41110a] rounded-full"></span>
@@ -174,7 +178,7 @@ const PregnancyCare = () => {
                                 desc: "Recovery guidance, nutrition adjustments, and emotional support."
                             }
                         ].map((step, i) => (
-                            <div key={i} className="flex items-center w-[60%] mx-auto gap-4">
+                            <div key={i} className="flex items-center w-[80%] md:w-[60%] mx-auto gap-4">
                                 <div className="bg-white text-yellow-500 w-10 h-10 flex items-center justify-center rounded-lg font-bold">
                                     {i + 1}
                                 </div>
@@ -190,7 +194,7 @@ const PregnancyCare = () => {
                 {/* Testimonials */}
                 <section className="bg-yellow-500 py-16 rounded-b-3xl">
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Testimonials</h2>
-                    <div className="grid sm:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+                    <div className="grid sm:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16 mx-2">
                         {[
                             `"The team at Embrace made my pregnancy experience joyful and stress-free. Their care didn’t end at delivery — they were with me during postpartum too." – Priya, Pregnancy Care Client`,
                             `"From nutrition to safe workouts, everything was tailored to my needs. I felt confident and healthy throughout." – Megha, Pregnancy Care Client`
@@ -219,15 +223,17 @@ const PregnancyCare = () => {
                             Every pregnancy is unique — and so is our care for you.
                         </h2>
                         <p className="text-xl font-semibold flex items-center justify-center gap-2 mb-8 text-[#41110a]">
-                            <FaPhoneAlt className="w-4 mt-1" /> Call: +91 XXXXX XXXXX
+                            <FaPhoneAlt className="w-4 mt-1" /> Call: +91 93138 64058
                         </p>
                         <div className="flex justify-center gap-4">
-                            <button
-                                href="/pdf/PregnancyCareProgram.pdf" // put your PDF file path here
+                            <a
+                                href="/pdf/PregnancyCareProgram.pdf"
                                 download="Pregnancy Care Program.pdf"
-                                className="bg-white text-[#cfa348] px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
+                                className="bg-white text-[#cfa348] px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition inline-block text-center"
+                            >
                                 Download Brochure
-                            </button>
+                            </a>
+
                         </div>
                     </div>
                 </section>

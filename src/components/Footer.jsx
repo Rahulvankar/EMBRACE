@@ -8,9 +8,9 @@ const Footer = () => {
         {/* Logo & Tagline */}
         <div className="flex flex-col gap-4">
           <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG87Zz7W9h3wCf-P7ppB5SXb-OJsos-kKsNA&s"
+            src="/EmbraceLogo.png"
             alt="Embrace Logo"
-            className="w-24 h-24 object-contain rounded-full border-4 border-[var(--brown-yellow-bg)] shadow-lg"
+            className="w-full h-28 object-contain border-4 border-white shadow-lg bg-[var(--brown-yellow-bg)] p-2 "
           />
           <p className="text-[15px] text-gray-100 leading-relaxed max-w-xs">
             Embrace your journey to holistic living — with care, transformation, and authenticity.
@@ -71,8 +71,8 @@ const Footer = () => {
             Join our community of 10,000+ and receive weekly insights and holistic wellness tips.
           </p>
           <div className="flex gap-4 mt-2">
-            {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 bg-white text-[var(--brown-red)] flex items-center justify-center rounded-full hover:bg-[var(--brown-yellow-bg)] hover:text-white transition">
+            {[ FaInstagram].map((Icon, i) => (
+              <a key={i} href="https://www.instagram.com/embrace.feel.alive?igsh=bTYwbWl1dnhmaXB2" className="w-10 h-10 bg-white text-[var(--brown-red)] flex items-center justify-center rounded-full hover:bg-[var(--brown-yellow-bg)] hover:text-white transition">
                 <Icon />
               </a>
             ))}

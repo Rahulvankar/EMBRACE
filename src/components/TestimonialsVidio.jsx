@@ -4,31 +4,30 @@ import { FaPlay, FaPause, FaCheckCircle } from "react-icons/fa";
 const testimonials = [
   {
     id: 1,
-    name: "ALEX",
-    role: "VERIFIED PATIENT",
-    review:
-      "I strongly recommend it for any long term allergy sufferers. If you're out there wondering, 'Will this work for me?' – please try it!",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    thumbnail: "https://picsum.photos/id/237/400/700",
+    // name: "ALEX",
+    // role: "VERIFIED PATIENT",
+    // review:
+    //   "I strongly recommend it for any long term allergy sufferers. If you're out there wondering, 'Will this work for me?' – please try it!",
+    src: "./EmbraceTestimonial.mp4",
   },
   {
     id: 2,
-    name: "SWATI",
-    role: "VERIFIED PATIENT",
-    review:
-      "I always had horrible allergies – nothing really helped. Allergy shots weren’t a fit for my lifestyle. I found Wyndly, and it changed my life.",
-    src: "https://www.w3schools.com/html/movie.mp4",
-    thumbnail: "https://picsum.photos/id/238/400/700",
+    // name: "SWATI",
+    // role: "VERIFIED PATIENT",
+    // review:
+    //   "I always had horrible allergies – nothing really helped. Allergy shots weren’t a fit for my lifestyle. I found Wyndly, and it changed my life.",
+    src: "./EmbracePhysiotherapist1.mp4",
+    // thumbnail: "https://picsum.photos/id/238/400/700",
   },
-  {
-    id: 3,
-    name: "JOE",
-    role: "VERIFIED PATIENT",
-    review:
-      "The drops have been such a great solution for me. I’ve been doing it for about four to five months now, and it’s unbelievable. I can breathe!",
-    src: "https://www.w3schools.com/html/mov_bbb.mp4",
-    thumbnail: "https://picsum.photos/id/239/400/700",
-  },
+  // {
+  //   id: 3,
+  //   name: "JOE",
+  //   role: "VERIFIED PATIENT",
+  //   review:
+  //     "The drops have been such a great solution for me. I’ve been doing it for about four to five months now, and it’s unbelievable. I can breathe!",
+  //   src: "https://www.w3schools.com/html/mov_bbb.mp4",
+  //   thumbnail: "https://picsum.photos/id/239/400/700",
+  // },
 ];
 
 export default function VideoTestimonials() {
@@ -60,24 +59,24 @@ export default function VideoTestimonials() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {testimonials.map((t) => (
           <div
             key={t.id}
             className="bg-[var(--brown-soft-bg)] rounded-xl shadow-lg overflow-hidden flex flex-col border border-[#D4AF37]/60 hover:shadow-[0_0_20px_#E2B63B55] transition duration-300"
           >
             {/* Name label */}
-            <div className="bg-[var(--brown-red)] text-[var(--brown-yellow-bg)] text-xs font-semibold px-3 py-2 tracking-wide">
+            {/* <div className="bg-[var(--brown-red)] text-[var(--brown-yellow-bg)] text-xs font-semibold px-3 py-2 tracking-wide">
               {t.name}
-            </div>
+            </div> */}
 
             {/* Video container */}
             <div className="relative">
               <video
                 ref={(el) => (videoRefs.current[t.id] = el)}
                 src={t.src}
-                poster={t.thumbnail}
-                className="w-full h-72 object-cover"
+                // poster={t.thumbnail}
+                className="w-full h-[600px] object-cover"
                 controls={false}
               />
               <button
@@ -93,15 +92,15 @@ export default function VideoTestimonials() {
             </div>
 
             {/* Role tag */}
-            <div className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] flex items-center justify-center gap-2 text-xs font-semibold py-2 tracking-wide">
+            {/* <div className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] flex items-center justify-center gap-2 text-xs font-semibold py-2 tracking-wide">
               <FaCheckCircle className="text-[#4B2E1E]" />
               {t.role}
-            </div>
+            </div> */}
 
             {/* Review text */}
-            <div className="p-4 text-[var(--brown-red)] text-sm italic line-clamp-3">
+            {/* <div className="p-4 text-[var(--brown-red)] text-sm italic line-clamp-3">
               {t.review}
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

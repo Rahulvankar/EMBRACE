@@ -26,14 +26,14 @@ const services = [
     title: "Pregnancy Care Program",
     desc: "A holistic wellness approach for expecting mothers. This includes safe and guided exercises to improve flexibility and reduce discomfort, along with nutrition planning, breathing techniques, and relaxation methods. Designed to support a healthy pregnancy and prepare the body for childbirth.",
     icon: <FaBaby size={36} className="text-[#E2B63B]" />,
-    img: "/image/pregnancyCare.jpeg",
+    img: "/image/pregnancyCare.jpg",
     url: '/PregnancyCare'
   },
   {
     title: "Menopause Wellness Program",
     desc: "A supportive program to help women navigate the changes during menopause. Focuses on managing symptoms like hot flashes, mood swings, and bone health through nutrition, exercise, mindfulness, and hormone-balancing strategies. Helps you stay confident, active, and balanced.",
     icon: <FaFemale size={36} className="text-[#E2B63B]" />,
-    img: "/image/menopauseWellness.jpeg",
+    img: "/image/menopauseWellness.webp",
     url: '/menopauseWellness'
   },
 ];
@@ -43,7 +43,7 @@ export default function ServicesSection() {
   return (
     <>
       <ProgramsHero />
-      <section className="bg-[var(--brown-soft-bg)] py-10">
+      <section className="bg-[var(--brown-soft-bg)] py-10 overflow-hidden">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           {/* Section Title */}
           <h2 className="text-4xl font-bold text-[var(--brown-red)] mb-3">

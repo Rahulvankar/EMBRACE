@@ -72,7 +72,7 @@ const SecondSection = () => {
                     </p>
 
                     <h2 className="text-[34px] md:text-[42px] leading-tight font-serif italic text-[var(--brown-red)] mb-6">
-                        Pioneering In-About Embrace (Intro)
+                        About Embrace (Intro)
                     </h2>
 
                     <p className="text-[var(--brown-red)] text-[16px] md:text-[18px] leading-relaxed mb-6">

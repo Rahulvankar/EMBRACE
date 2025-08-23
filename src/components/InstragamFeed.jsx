@@ -40,7 +40,7 @@ const InstragamFeed = () => {
       <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[var(--brown-red)] rounded-t-[100px] z-0"></div>
 
       {/* Main Content */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-10">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-28 md:gap-10">
 
         {/* Left: Mobile Mockup */}
         <div className="flex-[3] flex justify-center relative items-center">

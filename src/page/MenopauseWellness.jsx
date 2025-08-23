@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../components/Footer";
 import { HeadProvider, Title, Meta } from "react-head";
+import { Link } from "react-router-dom";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -21,9 +22,10 @@ const MenopauseWellness = () => {
                 <section
                     className="relative h-[100vh] flex flex-col justify-center items-center text-white text-center"
                     style={{
-                        backgroundImage: `url(/image/menopauseWellness.jpeg)`,
+                        backgroundImage: `url(/image/menopauseWellness.webp)`,
                         backgroundSize: "cover",
-                        backgroundPosition: "center"
+                        backgroundPosition: "center 50px",
+                        backgroundRepeat: "no-repeat"
                     }}
                 >
                     <div className="absolute inset-0 bg-black/50"></div>
@@ -31,7 +33,7 @@ const MenopauseWellness = () => {
                         initial="hidden"
                         animate="visible"
                         variants={fadeInUp}
-                        className="text-5xl font-extrabold relative z-10 mb-4 bg-gradient-to-r from-[var(--brown-yellow-bg)] to-[#cfa348] bg-clip-text text-transparent"
+                        className="text-3xl md:text-5xl font-extrabold relative z-10 mb-4 bg-gradient-to-r from-[var(--brown-yellow-bg)] to-[#cfa348] bg-clip-text text-transparent"
                     >
                         A New Chapter of Strength, Balance, and Vitality
                     </motion.h1>
@@ -40,7 +42,7 @@ const MenopauseWellness = () => {
                         animate="visible"
                         variants={fadeInUp}
                         transition={{ delay: 0.2 }}
-                        className="text-lg max-w-2xl relative z-10"
+                        className="text-1xl md:text-lg max-w-2xl relative z-10"
                     >
                         Menopause is a transition — not an ending. Our personalised wellness program supports you
                         through the changes, helping you feel in control, energised, and confident.
@@ -50,17 +52,21 @@ const MenopauseWellness = () => {
                         animate="visible"
                         variants={fadeInUp}
                         transition={{ delay: 0.4 }}
-                        className="flex gap-4 mt-6 relative z-10"
+                        className="md:flex gap-4 mt-6 relative z-10"
                     >
-                        <button className="bg-gradient-to-r from-[#f6d365] to-[#cfa348] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
-                            Book Your Consultation
+                        <button className="bg-gradient-to-r my-2 md:my-0 from-[#f6d365] to-[#cfa348] px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+                            <Link to="/contact" className="text-white">
+                                Book Your Consultation
+                            </Link>
                         </button>
-                        <button
-                            href="/pdf/MenopauseWellnessProgram.pdf" // put your PDF file path here
+                        <a
+                            href="/pdf/MenopauseWellnessProgram.pdf"
                             download="Menopause Wellness Program.pdf"
-                            className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-[#cfa348] transition">
+                            className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-[#cfa348] transition inline-block text-center"
+                        >
                             Download Program Brochure
-                        </button>
+                        </a>
+
                     </motion.div>
                 </section>
 
@@ -98,7 +104,7 @@ const MenopauseWellness = () => {
                 {/* Benefits */}
                 <section className="bg-yellow-500 py-16">
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Benefits</h2>
-                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 mx-2">
                         {[
                             "Reduced intensity and frequency of menopause-related symptoms.",
                             "Improved quality of sleep and energy levels.",
@@ -126,7 +132,7 @@ const MenopauseWellness = () => {
                         <div className="w-full h-full bg-[radial-gradient(circle,#dab370_1px,transparent_1px)] [background-size:25px_25px] opacity-20"></div>
                     </div>
                     <h2 className="text-3xl font-bold text-center mb-8">Who Can Benefit?</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-12 text-gray-800 w-[50%] mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-12 text-gray-800 w-[80%] md:w-[50%] mx-auto">
                         <ul className="space-y-4">
                             <li className="flex items-center gap-2">
                                 <span className="w-2 h-2 bg-[#41110a] rounded-full"></span>
@@ -176,7 +182,7 @@ const MenopauseWellness = () => {
                                 desc: "Strategies for sustainable health beyond menopause."
                             }
                         ].map((step, i) => (
-                            <div key={i} className="flex items-center w-[60%] mx-auto gap-4">
+                            <div key={i} className="flex items-center w-[80%] md:w-[60%] mx-auto gap-4">
                                 <div className="bg-white text-yellow-500 w-10 h-10 flex items-center justify-center rounded-lg font-bold">
                                     {i + 1}
                                 </div>
@@ -192,7 +198,7 @@ const MenopauseWellness = () => {
                 {/* Testimonials */}
                 <section className="bg-yellow-500 py-16 rounded-b-3xl">
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Testimonials</h2>
-                    <div className="grid sm:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+                    <div className="grid sm:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16 mx-2">
                         {[
                             `"I thought menopause meant slowing down. Embrace showed me it’s actually the start of a stronger, healthier life." – Neeta, Menopause Wellness Client`,
                             `"The personalised care plan helped me sleep better, feel more energised, and manage my mood swings naturally." – Anita, Menopause Wellness Client`
@@ -221,15 +227,16 @@ const MenopauseWellness = () => {
                             Menopause is a new beginning — embrace it with confidence and support.
                         </h2>
                         <p className="text-xl font-semibold flex items-center justify-center gap-2 mb-8 text-[#41110a]">
-                            <FaPhoneAlt className="w-4 mt-1" /> Call: +91 XXXXX XXXXX
+                            <FaPhoneAlt className="w-4 mt-1" /> Call: +91 93138 64058
                         </p>
                         <div className="flex justify-center gap-4">
-                            <button
-                                href="/pdf/MenopauseWellnessProgram.pdf" // put your PDF file path here
+                            <a
+                                href="/pdf/MenopauseWellnessProgram.pdf"
                                 download="Menopause Wellness Program.pdf"
-                                className="bg-white text-[#cfa348] px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition">
+                                className="bg-white text-[#cfa348] px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg hover:scale-105 transition inline-block text-center"
+                            >
                                 Download Brochure
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </section>

@@ -5,6 +5,7 @@ import { MdEmail, MdOutlineStarBorderPurple500 } from "react-icons/md";
 import { FaPhoneAlt, FaUsers } from "react-icons/fa";
 import AboutHero from "../components/AboutHero";
 import { Link } from "react-router-dom";
+import PhotoGallery from "../components/photoGallery";
 
 const container = {
     hidden: { opacity: 0 },
@@ -85,7 +86,7 @@ const About = () => {
                             </motion.div>
 
                             <motion.div
-                                className="absolute -top-10 right-4 md:right-0 w-44 h-44 md:w-64 md:h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white cursor-pointer"
+                                className="absolute -top-10 hidden md:block right-4 md:right-0 w-44 h-44 md:w-64 md:h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white cursor-pointer"
                                 variants={smoothFadeUp}
                                 {...smoothScaleHover}
                             >
@@ -205,10 +206,17 @@ const About = () => {
                             </motion.p>
                         </motion.div>
                     </div>
-
+                    <PhotoGallery />
                     {/* Meet Our Team */}
+                </motion.section>
+                <motion.section
+                    className="relative py-20 px-6 md:px-20 bg-gradient-to-b bg-[var(--brown-red)] rounded-t-2xl overflow-hidden"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <motion.div
-                        className="relative py-20 px-6 md:px-20 bg-gradient-to-b bg-[var(--brown-red)] rounded-t-2xl overflow-hidden"
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -293,6 +301,7 @@ const About = () => {
                     </motion.div>
 
                 </motion.section>
+
 
                 <motion.section
                     className="relative py-20 px-6 md:px-20 bg-[var(--brown-soft-bg)] text-[var(--brown-red)] overflow-hidden font-serif"
@@ -475,10 +484,10 @@ const About = () => {
                             className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 text-[var(--brown-red)] font-semibold"
                         >
                             <p className="flex items-center gap-2">
-                                <FaPhoneAlt className="w-4 mt-1" /> Call: <span className="text-[var(--brown-yellow-bg)]">+91 XXXXX XXXXX</span>
+                                <FaPhoneAlt className="w-4 mt-1" /> Call: <span className="text-[var(--brown-yellow-bg)]">+91 93138 64058</span>
                             </p>
                             <p className="flex items-center gap-2">
-                                <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">info@embrace.com</span>
+                                <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">mt.embrace.wellness@gmail.com</span>
                             </p>
                         </motion.div>
 

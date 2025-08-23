@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.23.11",
-    "lucide-react": "^0.539.0",
+    "lucide-react": "^0.541.0",
+    "nodemailer": "^7.0.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-head": "^3.4.2",

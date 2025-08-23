@@ -6,7 +6,7 @@ const ProgramsHero = () => {
         <section
             className="relative h-screen w-full font-['Playfair_Display'] bg-cover bg-center"
             style={{
-                backgroundImage:'url(image/programshero.webp)'
+                backgroundImage:'url(image/programshero.jpg)'
             }}
         >
             <Header />

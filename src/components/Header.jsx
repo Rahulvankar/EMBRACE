@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [serviceDropdownOpen, setServiceDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   // Detect scroll
   useEffect(() => {
@@ -15,52 +17,128 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Handle Services default redirect
+  const handleServicesClick = (e) => {
+    e.preventDefault();
+    navigate("/services"); // Default redirect
+    setServiceDropdownOpen(false);
+  };
+
+  // Common function for active/inactive classes
+  const linkClasses = ({ isActive }) =>
+    isActive
+      ? "py-2 px-4 rounded-sm text-[#C0A062] font-semibold"
+      : "py-2 px-4 rounded-sm text-[var(--brown-red)] hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]";
+
   return (
-    <header
-      className={`fixed w-full z-50 transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"
-        }`}
-    >
+    <header className="fixed w-full z-50 transition-colors duration-300 bg-[var(--brown-yellow-bg)]">
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
-        <Link
-          to="/"
-          className={`text-2xl font-bold ${scrolled ? "text-black" : "text-white"
-            }`}
-        >
-          <img src="/EmbraceLogo.png" alt="" className="w-20" />
-        </Link>
+        <NavLink to="/" className="text-2xl font-bold text-white">
+          <img src="/EmbraceLogo.png" alt="" className="w-20 p-2" />
+        </NavLink>
 
         {/* Desktop Menu */}
-        <nav
-          className={`hidden md:flex items-center space-x-6 ${scrolled ? "text-black" : "text-white"
-            }`}
-        >
-          <Link to="/" className="hover:text-[#C0A062]">
+        <nav className="hidden md:flex items-center space-x-6">
+          <NavLink to="/" className={linkClasses}>
             Home
-          </Link>
-          <Link to="/about" className="hover:text-[#C0A062]">
+          </NavLink>
+          <NavLink to="/about" className={linkClasses}>
             About Us
-          </Link>
-          <Link to="/services" className="hover:text-[#C0A062]">
-            Services
-          </Link>
-          <Link to="/blog" className="hover:text-[#C0A062]">
+          </NavLink>
+
+          {/* Services Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
+              className="flex items-center gap-1 py-2 px-4 rounded-sm text-[var(--brown-red)] hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            >
+              Services
+              <FiChevronDown
+                className={`transition-transform duration-300 ${serviceDropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+              />
+            </button>
+
+            {serviceDropdownOpen && (
+              <div className="absolute left-0 mt-2 w-56 bg-white text-[var(--brown-red)] shadow-lg rounded-md z-50">
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={handleServicesClick}
+                >
+                  Services
+                </NavLink>
+                <NavLink
+                  to="/bodyTransformation"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Body Transformation
+                </NavLink>
+                <NavLink
+                  to="/cancerRehabilitation"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Cancer Rehabilitation
+                </NavLink>
+                <NavLink
+                  to="/menopauseWellness"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Menopause Wellness
+                </NavLink>
+                <NavLink
+                  to="/pregnancyCare"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Pregnancy Care
+                </NavLink>
+              </div>
+            )}
+          </div>
+
+          <NavLink to="/blog" className={linkClasses}>
             Blog
-          </Link>
-          <Link to="/testimonials" className="hover:text-[#C0A062]">
+          </NavLink>
+          <NavLink to="/testimonials" className={linkClasses}>
             Testimonials
-          </Link>
+          </NavLink>
         </nav>
 
-        <Link
+        <NavLink
           to="/contact"
-          className={`px-4 py-2 rounded md:flex hidden transition-colors duration-300 ${scrolled
-            ? "bg-transparent border border-1 border-[var(--brown-yellow-bg)] text-white hover:bg-[#C0A062] hover:text-black"
-            : "bg-[#C0A062] text-black hover:bg-black hover:text-white"
-            }`}
+          className={({ isActive }) =>
+            isActive
+              ? "hidden md:block border-2px bg-[#C0A062] text-black py-2 px-4 rounded-sm font-semibold"
+              : "hidden md:block border-2px bg-[var(--brown-red)] text-[var(--brown-yellow-bg)] hover:bg-white py-2 px-4 rounded-sm hover:text-[var(--brown-yellow-bg)]"
+          }
         >
           Get in Touch
-        </Link>
+        </NavLink>
 
         {/* Mobile Menu Button */}
         <button
@@ -75,41 +153,136 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <nav className="md:hidden bg-white shadow-lg px-4 pb-4">
-          <Link
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "block py-2 border-b text-[#C0A062] font-semibold"
+                : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            }
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+          <NavLink
             to="/about"
-            className="block py-2 border-b hover:text-[#C0A062]"
+            className={({ isActive }) =>
+              isActive
+                ? "block py-2 border-b text-[#C0A062] font-semibold"
+                : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            }
             onClick={() => setMobileMenuOpen(false)}
           >
             About Us
-          </Link>
-          <Link
-            to="/services"
-            className="block py-2 border-b hover:text-[#C0A062]"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Services
-          </Link>
-          <Link
+          </NavLink>
+
+          {/* Mobile Dropdown for Services */}
+          <div className="border-b">
+            <button
+              onClick={() => setServiceDropdownOpen(!serviceDropdownOpen)}
+              className="w-full text-left py-2 flex items-center gap-1 text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            >
+              Services
+              <FiChevronDown
+                className={`transition-transform duration-300 ${serviceDropdownOpen ? "rotate-180" : "rotate-0"
+                  }`}
+              />
+            </button>
+
+            {serviceDropdownOpen && (
+              <div className="pl-4">
+                <NavLink
+                  to="/services"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={handleServicesClick}
+                >
+                  Services
+                </NavLink>
+                <NavLink
+                  to="/bodyTransformation"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Body Transformation
+                </NavLink>
+                <NavLink
+                  to="/cancerRehabilitation"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Cancer Rehabilitation
+                </NavLink>
+                <NavLink
+                  to="/menopauseWellness"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Menopause Wellness
+                </NavLink>
+                <NavLink
+                  to="/pregnancyCare"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pregnancy Care
+                </NavLink>
+              </div>
+            )}
+          </div>
+
+          <NavLink
             to="/blog"
-            className="block py-2 border-b hover:text-[#C0A062]"
+            className={({ isActive }) =>
+              isActive
+                ? "block py-2 border-b text-[#C0A062] font-semibold"
+                : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            }
             onClick={() => setMobileMenuOpen(false)}
           >
             Blog
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/testimonials"
-            className="block py-2 border-b hover:text-[#C0A062]"
+            className={({ isActive }) =>
+              isActive
+                ? "block py-2 border-b text-[#C0A062] font-semibold"
+                : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+            }
             onClick={() => setMobileMenuOpen(false)}
           >
             Testimonials
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/contact"
-            className="block mt-2 bg-transparent text-white px-4 py-2 rounded hover:bg-[#C0A062] hover:text-black text-center"
+            className={({ isActive }) =>
+              isActive
+                ? "block mt-2 bg-[#C0A062] text-black px-4 py-2 rounded font-semibold"
+                : "block mt-2 bg-[var(--brown-red)] text-[var(--brown-yellow-bg)] px-4 py-2 rounded hover:bg-[var(--brown-yellow-bg)] hover:text-[var(--brown-red)] text-center"
+            }
             onClick={() => setMobileMenuOpen(false)}
           >
             Get in Touch
-          </Link>
+          </NavLink>
         </nav>
       )}
     </header>

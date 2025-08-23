@@ -11,11 +11,11 @@ const Testimonials = () => {
     return (
         <>
             <HeadProvider>
-                        <Title>Client Testimonials | Embrace Women’s Wellness </Title>
-                        <Meta name="description" content=" Discover real stories of transformation at Embrace — from cancer recovery to pregnancy journeys, menopause support, and body transformation success" />
-                    </HeadProvider>
+                <Title>Client Testimonials | Embrace Women’s Wellness </Title>
+                <Meta name="description" content=" Discover real stories of transformation at Embrace — from cancer recovery to pregnancy journeys, menopause support, and body transformation success" />
+            </HeadProvider>
             <TestimonialsHero />
-            {/* <TestimonialsVidio /> */}
+            <TestimonialsVidio />
             <TrustSignals />
             {/* <BeforeAfterSection /> */}
             <Footer />

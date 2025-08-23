@@ -45,10 +45,10 @@ const Consultation = () => {
                         className="flex flex-col md:flex-row items-center justify-center gap-6 mb-10 text-[var(--brown-red)] font-semibold"
                     >
                         <p className="flex items-center gap-2">
-                            <FaPhoneAlt className="w-4 mt-1" /> Call: <span className="text-[var(--brown-yellow-bg)]">+91 XXXXX XXXXX</span>
+                            <FaPhoneAlt className="w-4 mt-1" /> Call: <span className="text-[var(--brown-yellow-bg)]">+91 93138 64058</span>
                         </p>
                         <p className="flex items-center gap-2">
-                            <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">info@embrace.com</span>
+                            <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">mt.embrace.wellness@gmail.com</span>
                         </p>
                     </motion.div>
 
