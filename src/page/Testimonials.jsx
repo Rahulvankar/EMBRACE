@@ -15,7 +15,7 @@ const Testimonials = () => {
                 <Meta name="description" content=" Discover real stories of transformation at Embrace — from cancer recovery to pregnancy journeys, menopause support, and body transformation success" />
             </HeadProvider>
             <TestimonialsHero />
-            <TestimonialsVidio />
+            {/* <TestimonialsVidio /> */}
             <TrustSignals />
             {/* <BeforeAfterSection /> */}
             <Footer />
