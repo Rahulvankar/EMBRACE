@@ -83,7 +83,7 @@ const BlogPage = () => {
                     {/* Featured Post */}
                     {blogPosts
                         .filter((post) => post.featured)
-                        .map(({ id, title, description, date, tags, image }) => (
+                        .map(({ id, title, description, tags, image }) => (
                             <div
                                 key={id}
                                 className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-20 items-center relative z-10"
@@ -98,7 +98,6 @@ const BlogPage = () => {
                                         {tags.map((tag) => (
                                             <Tag key={tag} label={tag} />
                                         ))}
-                                        <span className="text-xs text-gray-400 ml-auto">{date}</span>
                                     </div>
                                     <h2 className="text-3xl font-semibold mb-4 text-[var(--brown-red)]">{title}</h2>
                                     <p className="text-[var(--brown-red)] leading-relaxed mb-6">{description}</p>
@@ -127,7 +126,7 @@ const BlogPage = () => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 relative z-10">
                             {filteredPosts
                                 .filter((post) => !post.featured)
-                                .map(({ id, title, description, date, tags, image }) => (
+                                .map(({ id, title, description, tags, image }) => (
                                     <div
                                         key={id}
                                         className="bg-[var(--brown-red)] rounded-lg shadow-md overflow-hidden"
@@ -147,7 +146,6 @@ const BlogPage = () => {
                                                         {tag}
                                                     </span>
                                                 ))}
-                                                <span className="text-xs ml-auto">{date}</span>
                                             </div>
                                             <h3 className="text-lg font-semibold mb-2 tracking-widest">
                                                 {title}

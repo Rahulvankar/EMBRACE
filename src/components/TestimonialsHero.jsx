@@ -7,7 +7,7 @@ const TestimonialsHero = () => {
             className="relative h-screen w-full font-['Playfair_Display'] bg-cover bg-center"
             style={{
                 backgroundImage:
-                    "url('/image/Testimonials.jpg')", // Replace with a blog banner image
+                    "url('/image/Testimonials_bg.jpg')", // Replace with a blog banner image
             }}
         >
             <Header />

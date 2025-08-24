@@ -23,26 +23,29 @@ import Header from './components/Header';
 import Testimonials from './page/Testimonials';
 import ServicesSection from './page/ProgramsServices.jsx';
 import Contact from './page/Contact.jsx';
+import ScrollToTop from './components/ScrollToTop.js';
 function App() {
   return (
     <>
       <BrowserRouter>
         {/* Header sab pages pe dikhana hai */}
         <Header />
+        <ScrollToTop />
+
 
         {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/services" element={<ServicesSection/>} />
-          <Route path="/testimonials" element={<Testimonials />}/>
+          <Route path="/services" element={<ServicesSection />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/bodyTransformation" element={<BodyTransformation />} />
           <Route path="/cancerRehabilitation" element={<CancerRehabilitation />} />
           <Route path="/menopauseWellness" element={<MenopauseWellness />} />
           <Route path="/PregnancyCare" element={<PregnancyCare />} />
           <Route path="/contact" element={<Contact />} />
-      
+
         </Routes>
       </BrowserRouter>
     </>
