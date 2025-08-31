@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Heart, Users, Brain, Handshake, Home } from "lucide-react";
-import bg_logo from '../../public/image/Embrace_logo.png';
 
 export default function WhyChooseEmbrace() {
     const points = [
@@ -33,7 +32,7 @@ export default function WhyChooseEmbrace() {
 
     return (
         <section className="py-20 bg-[var(--brown-yellow-bg)] relative overflow-hidden font-sans">
-                  <img src={bg_logo} alt=""  className="bg_logo"/>
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
 
             <div className="max-w-6xl mx-auto px-6">
                 {/* Heading */}

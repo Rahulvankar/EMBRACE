@@ -6,7 +6,6 @@ import { FaPhoneAlt, FaUsers } from "react-icons/fa";
 import AboutHero from "../components/AboutHero";
 import { Link } from "react-router-dom";
 import PhotoGallery from "../components/photoGallery";
-import bg_logo from '../../public/image/Embrace_logo.png';
 
 const container = {
     hidden: { opacity: 0 },
@@ -162,7 +161,7 @@ const About = () => {
                 >
 
                     <div className="pt-20 max-w-6xl mx-auto px-6 pb-20 relative overflow-hidden font-serif">
-                          <img src={bg_logo} alt=""  className="bg_logo"/>
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
                         <motion.h2
                             className="text-4xl font-bold text-center text-white mb-14 drop-shadow-lg"
                             initial={{ opacity: 0, y: 20 }}
@@ -408,7 +407,7 @@ const About = () => {
                     variants={container}
                 >
 
-                        <img src={bg_logo} alt=""  className="bg_logo"/>
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
                     <div className="relative z-10 max-w-5xl mx-auto text-center">
                         <motion.h2
                             className="text-3xl md:text-4xl font-bold mb-12 text-white"

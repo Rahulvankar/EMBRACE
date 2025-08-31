@@ -3,7 +3,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Footer from "../components/Footer";
 import { HeadProvider, Title, Meta } from "react-head";
 import { Link } from "react-router-dom";
-import bg_logo from '../../public/image/Embrace_logo.png';
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
@@ -104,7 +103,7 @@ const MenopauseWellness = () => {
 
                 {/* Benefits */}
                 <section className="bg-yellow-500 py-16 relative overflow-hidden">
-                    <img src={bg_logo} alt="" className="bg_logo" />
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
 
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Benefits</h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 px-2">
@@ -200,7 +199,7 @@ const MenopauseWellness = () => {
 
                 {/* Testimonials */}
                 <section className="bg-yellow-500 py-16 rounded-b-3xl relative overflow-hidden">
-                    <img src={bg_logo} alt="" className="bg_logo" />
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
 
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Testimonials</h2>
                     <div className="grid sm:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16 px-2">
