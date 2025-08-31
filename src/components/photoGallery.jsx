@@ -11,6 +11,7 @@ export default function PhotoGallery() {
         "/image/galary-img6.jpeg",
         "/image/galary-img7.jpeg",
         "/image/galary-img8.jpeg",
+        "/image/galary-img9.jpeg",
     ];
 
     return (
@@ -19,7 +20,7 @@ export default function PhotoGallery() {
                 <div className="w-full h-full bg-[radial-gradient(#dab370_1px,transparent_1px)] [background-size:25px_25px] opacity-20 animate-pulse"></div>
             </div>
             <h1 className="text-3xl font-bold mb-6"> My Photo Gallery</h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
                 {photos.map((photo, index) => (
                     <div key={index} className="overflow-hidden rounded-lg shadow-lg">
                         <img

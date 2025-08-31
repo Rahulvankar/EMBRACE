@@ -9,20 +9,6 @@ import { Link } from "react-router-dom";
 
 const services = [
   {
-    title: "Body Transformation Program",
-    desc: "Personalized fitness and nutrition plans tailored to your unique goals. This program combines strength training, cardio, flexibility routines, and diet guidance to help you build muscle, burn fat, and sustain long-term healthy habits. Progress is tracked with regular assessments to ensure maximum results.",
-    icon: <FaRunning size={36} className="text-[#E2B63B]" />,
-    img: '/image/bodyTransformation.jpg',
-    url: '/bodyTransformation'
-  },
-  {
-    title: "Cancer Rehabilitation",
-    desc: "A gentle yet effective program designed to help cancer survivors regain their strength, mobility, and overall well-being. Includes physiotherapy, light exercise, nutrition advice, and mental health support. Focused on boosting energy levels and rebuilding confidence after treatment.",
-    icon: <FaRibbon size={36} className="text-[#E2B63B]" />,
-    img: "/image/Cancer-Rehabilitation.jpg",
-    url: '/cancerRehabilitation'
-  },
-  {
     title: "Pregnancy Care Program",
     desc: "A holistic wellness approach for expecting mothers. This includes safe and guided exercises to improve flexibility and reduce discomfort, along with nutrition planning, breathing techniques, and relaxation methods. Designed to support a healthy pregnancy and prepare the body for childbirth.",
     icon: <FaBaby size={36} className="text-[#E2B63B]" />,
@@ -36,6 +22,20 @@ const services = [
     img: "/image/menopauseWellness.webp",
     url: '/menopauseWellness'
   },
+  {
+    title: "Body Transformation Program",
+    desc: "Personalized fitness and nutrition plans tailored to your unique goals. This program combines strength training, cardio, flexibility routines, and diet guidance to help you build muscle, burn fat, and sustain long-term healthy habits. Progress is tracked with regular assessments to ensure maximum results.",
+    icon: <FaRunning size={36} className="text-[#E2B63B]" />,
+    img: '/image/bodyTransformation.jpg',
+    url: '/bodyTransformation'
+  },
+  {
+    title: "Cancer Rehabilitation",
+    desc: "A gentle yet effective program designed to help cancer survivors regain their strength, mobility, and overall well-being. Includes physiotherapy, light exercise, nutrition advice, and mental health support. Focused on boosting energy levels and rebuilding confidence after treatment.",
+    icon: <FaRibbon size={36} className="text-[#E2B63B]" />,
+    img: "/image/Cancer-Rehabilitation.jpg",
+    url: '/cancerRehabilitation'
+  }
 ];
 
 

@@ -6,6 +6,7 @@ import { FaPhoneAlt, FaUsers } from "react-icons/fa";
 import AboutHero from "../components/AboutHero";
 import { Link } from "react-router-dom";
 import PhotoGallery from "../components/photoGallery";
+import bg_logo from '../../public/image/Embrace_logo.png';
 
 const container = {
     hidden: { opacity: 0 },
@@ -74,18 +75,18 @@ const About = () => {
                         {/* Images */}
                         <motion.div className="relative flex-1 flex justify-center" variants={smoothSlideLeft}>
                             <motion.div
-                                className="relative w-[90%] md:w-[75%] rounded-3xl overflow-hidden shadow-2xl border-8 border-white cursor-pointer"
+                                className="relative w-full rounded-3xl overflow-hidden shadow-2xl border-8 border-white cursor-pointer"
                                 variants={smoothFadeUp}
                                 {...smoothScaleHover}
                             >
                                 <img
-                                    src="/image/inst2.jpg"
+                                    src="/image/about_img.jpeg"
                                     alt="Luxury Room"
                                     className="w-full h-auto object-cover"
                                 />
                             </motion.div>
 
-                            <motion.div
+                            {/* <motion.div
                                 className="absolute -top-10 hidden md:block right-4 md:right-0 w-44 h-44 md:w-64 md:h-52 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white cursor-pointer"
                                 variants={smoothFadeUp}
                                 {...smoothScaleHover}
@@ -95,7 +96,7 @@ const About = () => {
                                     alt="Hotel Room"
                                     className="w-full h-full object-cover"
                                 />
-                            </motion.div>
+                            </motion.div> */}
 
                             <motion.div
                                 className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-xl px-6 py-3 flex justify-center items-center gap-3 border border-yellow-400 cursor-default"
@@ -153,13 +154,15 @@ const About = () => {
 
                 {/* Founder’s Note */}
                 <motion.section
-                    className="pt-20 bg-gradient-to-b bg-[var(--brown-yellow-bg)]"
+                    className=" bg-gradient-to-b bg-[var(--brown-yellow-bg)] "
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
-                    <div className="max-w-6xl mx-auto px-6 pb-20">
+
+                    <div className="pt-20 max-w-6xl mx-auto px-6 pb-20 relative overflow-hidden font-serif">
+                          <img src={bg_logo} alt=""  className="bg_logo"/>
                         <motion.h2
                             className="text-4xl font-bold text-center text-white mb-14 drop-shadow-lg"
                             initial={{ opacity: 0, y: 20 }}
@@ -404,6 +407,8 @@ const About = () => {
                     viewport={{ once: true }}
                     variants={container}
                 >
+
+                        <img src={bg_logo} alt=""  className="bg_logo"/>
                     <div className="relative z-10 max-w-5xl mx-auto text-center">
                         <motion.h2
                             className="text-3xl md:text-4xl font-bold mb-12 text-white"

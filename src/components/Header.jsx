@@ -74,6 +74,28 @@ export default function Header() {
                   Services
                 </NavLink>
                 <NavLink
+                  to="/pregnancyCare"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Pregnancy Care
+                </NavLink>
+                <NavLink
+                  to="/menopauseWellness"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
+                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setServiceDropdownOpen(false)}
+                >
+                  Menopause Wellness
+                </NavLink>
+                <NavLink
                   to="/bodyTransformation"
                   className={({ isActive }) =>
                     isActive
@@ -95,28 +117,8 @@ export default function Header() {
                 >
                   Cancer Rehabilitation
                 </NavLink>
-                <NavLink
-                  to="/menopauseWellness"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
-                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
-                  }
-                  onClick={() => setServiceDropdownOpen(false)}
-                >
-                  Menopause Wellness
-                </NavLink>
-                <NavLink
-                  to="/pregnancyCare"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block px-4 py-2 text-[#C0A062] font-semibold"
-                      : "block px-4 py-2 hover:bg-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
-                  }
-                  onClick={() => setServiceDropdownOpen(false)}
-                >
-                  Pregnancy Care
-                </NavLink>
+
+
               </div>
             )}
           </div>

@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import bg_logo from '../../public/image/Embrace_logo.png';
 const TrustSignals = () => {
   const [mounted, setMounted] = useState(false);
   const [winWidth, setWinWidth] = useState(0);
@@ -45,7 +45,8 @@ const TrustSignals = () => {
   );
 
   return (
-    <section className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] py-24 px-4">
+    <section className="bg-[var(--brown-yellow-bg)] text-[var(--brown-red)] py-24 px-4 relative overflow-hidden">
+      <img src={bg_logo} alt="" className="bg_logo" />
       <div className="w-full max-w-7xl mx-auto mb-3">
         <h2 className="text-3xl font-bold text-center mb-10">What Our Clients Say</h2>
 

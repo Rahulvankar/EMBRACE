@@ -7,6 +7,7 @@ const galleryImages = [
   '/image/inst3.jpg',
   '/image/inst4.jpg',
 ];
+import bg_logo from '../../public/image/Embrace_logo.png';
 
 const InstragamFeed = () => {
   const [mainImage, setMainImage] = useState(galleryImages[0]);
@@ -40,6 +41,8 @@ const InstragamFeed = () => {
       <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[var(--brown-red)] rounded-t-[100px] z-0"></div>
 
       {/* Main Content */}
+            <img src={bg_logo} alt=""  className="bg_logo"/>
+
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-28 md:gap-10">
 
         {/* Left: Mobile Mockup */}

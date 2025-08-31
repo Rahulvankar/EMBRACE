@@ -35,19 +35,19 @@ const SecondSection = () => {
 
                         {/* Front Box */}
                         <div className="relative w-full h-full bg-white rounded-xl border-2 border-[var(--brown-red)] overflow-hidden shadow-xl z-10 flex flex-col justify-center items-center text-center px-6 py-8">
-                            <div className="text-[#9d2b1f] text-3xl mb-4 flex gap-1">
+                            <div className="text-[#9d2b1f] text-3xl mb-2 flex gap-1">
                                 <MdSpa />
                                 <MdSpa />
                                 <MdSpa />
                             </div>
 
                             <img
-                                src="https://t4.ftcdn.net/jpg/02/20/90/19/360_F_220901940_V26RzCNGgJrZBNBScQEWdTe6ix6f52vQ.jpg"
+                                src="/image/home_about_img.jpeg"
                                 alt="Founder"
-                                className="w-full h-48 object-cover rounded-md mb-4"
+                                className="w-full h-72 object-cover rounded-md mb-1"
                             />
 
-                            <p className="text-[#9d2b1f] font-semibold text-sm italic mb-2">
+                            <p className="text-[#9d2b1f] font-semibold text-sm italic mb-1">
                                 “Healing starts within — tune into your journey.”
                             </p>
 

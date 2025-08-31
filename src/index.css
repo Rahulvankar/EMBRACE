@@ -13,7 +13,23 @@
   --brown-soft-bg: #FFFDF7;
 }
 
+.bg_img_logo {
+background-image: url('../public/image/Embrace_Logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-blend-mode: multiply;      /* blends color + image */
+}
 
+.bg_logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.1; /* Adjust opacity as needed */
+  height: auto;
+  z-index: 0; /* Ensure it's behind other content */
+}
 .brown-red {
   color: var(--brown-red);
 }

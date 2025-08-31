@@ -8,7 +8,7 @@ import {
   FaStar,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import bg_logo from '../../public/image/Embrace_logo.png';
 const cardData = [
   {
     title: "Cancer Rehabilitation",
@@ -51,7 +51,7 @@ const HighlightedProgramsCards = () => {
     <section className="py-24 bg-[var(--brown-yellow-bg)] relative overflow-hidden font-sans">
       {/* Background Layer */}
       <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[var(--brown-red)] rounded-t-[100px] z-0"></div>
-
+      <img src={bg_logo} alt=""  className="bg_logo"/>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-center text-4xl font-semibold mb-6 text-[var(--brown-red)] tracking-wide">
           Highlighted Programs

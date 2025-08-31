@@ -8,13 +8,13 @@ import { Link } from 'react-router-dom';
 
 const testimonials = [
   {
-    name: 'Rahul',
-    image: 'https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg',
+    name: 'Arati',
+    image: '/image/EmbraceLogo.png',
     text: '"Embrace didn’t just help me recover — they gave me my life back. I feel stronger, happier, and ready to take on the worldagain." – Aarti, Cancer Rehabilitation Client',
   },
   {
     name: 'Nisha',
-    image: 'https://www.shutterstock.com/image-photo/confident-smiling-middle-aged-business-600nw-2451544833.jpg',
+    image: '/image/EmbraceLogo.png',
     text: '"The care I received during my pregnancy was extraordinary. I felt supported, informed, and confident every single day." – Nisha, Pregnancy Care Client.',
   }
 ];
@@ -59,11 +59,11 @@ const ConnectMembers = () => {
                     transition={{ duration: 0.6 }}
                     className="flex flex-col items-center justify-center text-center h-full px-4"
                   >
-                    <div className="w-28 h-28 mb-4 rounded-full overflow-hidden border-4 border-[var(--brown-yellow-bg)] shadow-lg">
+                    <div className="w-28 h-28 mb-4 rounded-full  items-center flex flex-col justify-center overflow-hidden border-2 border-[var(--brown-red)] bg-[var(--brown-yellow-bg)] shadow-lg">
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover"
+                        className="w-[70%] h-auto object-fill m-auto"
                       />
                     </div>
 
