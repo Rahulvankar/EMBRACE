@@ -95,7 +95,7 @@ const BodyTransformation = () => {
 
                 {/* Benefits */}
                 <section className=" bg-[var(--brown-yellow-bg)] py-16 relative overflow-hidden">
-<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
+                    <img src="image/Embrace.png" alt="embrace_bg" className="bg_logo" />
 
                     <h2 className="text-4xl font-bold text-center mb-12 text-white">Benefits</h2>
                     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
@@ -195,7 +195,7 @@ const BodyTransformation = () => {
 
 
                 <section className="bg-yellow-500 py-16 rounded-b-3xl relative overflow-hidden">
-                          <img src={bg_logo} alt=""  className="bg_logo"/>
+                    <img src="image/Embrace.png" alt="embrace_bg" className="bg_logo" />
 
                     {/* Content */}
                     <h2 className="text-4xl font-bold text-center mb-12 relative z-10 text-white">Testimonials</h2>
