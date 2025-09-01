@@ -205,6 +205,28 @@ export default function Header() {
                   Services
                 </NavLink>
                 <NavLink
+                  to="/pregnancyCare"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Pregnancy Care
+                </NavLink>
+                <NavLink
+                  to="/menopauseWellness"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "block py-2 border-b text-[#C0A062] font-semibold"
+                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
+                  }
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Menopause Wellness
+                </NavLink>
+                <NavLink
                   to="/bodyTransformation"
                   className={({ isActive }) =>
                     isActive
@@ -226,28 +248,8 @@ export default function Header() {
                 >
                   Cancer Rehabilitation
                 </NavLink>
-                <NavLink
-                  to="/menopauseWellness"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 border-b text-[#C0A062] font-semibold"
-                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
-                  }
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Menopause Wellness
-                </NavLink>
-                <NavLink
-                  to="/pregnancyCare"
-                  className={({ isActive }) =>
-                    isActive
-                      ? "block py-2 border-b text-[#C0A062] font-semibold"
-                      : "block py-2 border-b text-[var(--brown-red)] hover:text-[var(--brown-yellow-bg)]"
-                  }
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Pregnancy Care
-                </NavLink>
+                
+
               </div>
             )}
           </div>

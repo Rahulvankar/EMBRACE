@@ -9,30 +9,33 @@ import {
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const cardData = [
-  {
-    title: "Cancer Rehabilitation",
-    desc: "Reclaim your strength and independence after cancer treatment with our evidence-based rehabilitation program. Through tailored physiotherapy, targeted nutrition, and emotional support, we help manage fatigue, rebuild mobility, and restore your quality of life — empowering you to step into your next chapter with confidence.",
-    icon: <FaRunning size={22} />,
-    url: '/cancerRehabilitation',
-  },
-  {
+   {
     title: "Pregnancy Care Program",
     desc: "Experience a pregnancy journey filled with reassurance and expert guidance. Our holistic care covers medical check-ins, nutrition plans, safe exercise, and stress management techniques to support both you and your baby’s health from the very first trimester through postpartum recovery.",
     icon: <FaMedal size={22} />,
     url: '/PregnancyCare',
   },
-  {
+   {
     title: "Menopause Wellness Program",
     desc: "Menopause marks a new beginning — and our program ensures you embrace it with balance and vitality. Combining medical expertise, lifestyle adjustments, hormonal support (where needed), and emotional wellbeing strategies, we help you navigate symptoms while protecting your long-term health.",
     icon: <FaChalkboardTeacher size={22} />,
     url: '/menopauseWellness',
   },
+   
   {
     title: "Body Transformation Program",
     desc: "More than just fitness — this is a lifestyle revolution. Our body transformation journey blends personalised training, nutrition coaching, and behavioural guidance to achieve sustainable results in strength, energy, and overall wellness. Whether your goal is weight management, muscle toning, or improved stamina, we make it achievable and lasting.",
     icon: <FaCalendarAlt size={22} />,
     url: '/bodyTransformation',
   },
+  {
+    title: "Cancer Rehabilitation",
+    desc: "Reclaim your strength and independence after cancer treatment with our evidence-based rehabilitation program. Through tailored physiotherapy, targeted nutrition, and emotional support, we help manage fatigue, rebuild mobility, and restore your quality of life — empowering you to step into your next chapter with confidence.",
+    icon: <FaRunning size={22} />,
+    url: '/cancerRehabilitation',
+  },
+ 
+
 ];
 
 
@@ -50,13 +53,13 @@ const HighlightedProgramsCards = () => {
     <section className="py-24 bg-[var(--brown-yellow-bg)] relative overflow-hidden font-sans">
       {/* Background Layer */}
       <div className="absolute inset-x-0 top-1/2 h-3/4 bg-[var(--brown-red)] rounded-t-[100px] z-0"></div>
-<img src="image/Embrace.png" alt=""  className="bg_logo"/>
+<img src="image/Embrace.png" alt="embrace_bg"  className="bg_logo"/>
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-center text-4xl font-semibold mb-6 text-[var(--brown-red)] tracking-wide">
           Highlighted Programs
         </h2>
         <p className="text-center text-lg italic text-[var(--brown-red)] mb-14">
-          (Cancer Rehabilitation, Pregnancy Care Program, Menopause Wellness Program, Body Transformation Program)
+          (Cancer Rehabilitation, Pregnancy Care Proxgram, Menopause Wellness Program, Body Transformation Program)
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
