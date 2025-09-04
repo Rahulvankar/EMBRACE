@@ -147,7 +147,7 @@ const Contact = () => {
                                         <FaEnvelope className="w-6 h-6 text-[var(--brown-yellow-bg)] mt-1" />
                                         <div>
                                             <h4 className="font-semibold mb-1">Email</h4>
-                                            <p>contact@embracewellness.com</p>
+                                            <p>embracefeelalive22@gmail.com</p>
                                         </div>
                                     </div>
                                     <h3 className="text-xl font-bold mb-4 text-[var(--brown-yellow-bg)]">Follow Us</h3>

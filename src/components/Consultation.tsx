@@ -48,7 +48,7 @@ const Consultation = () => {
                             <FaPhoneAlt className="w-4 mt-1" /> Call: <span className="text-[var(--brown-yellow-bg)]">+91 93138 64058</span>
                         </p>
                         <p className="flex items-center gap-2">
-                            <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">mt.embrace.wellness@gmail.com</span>
+                            <MdEmail className="w-4 mt-1" />  Email: <span className="text-[var(--brown-yellow-bg)]">embracefeelalive22@gmail.com</span>
                         </p>
                     </motion.div>
 

@@ -38,10 +38,10 @@ const Footer = () => {
 
           {/* Email (click to open default mail app) */}
           <a
-            href="mailto:mt.embrace.wellness@gmail.com"
+            href="mailto:embracefeelalive22@gmail.com"
             className="text-[15px] text-gray-200 mb-2 block hover:underline"
           >
-            Email: mt.embrace.wellness@gmail.com
+            Email: embracefeelalive22@gmail.com
           </a>
 
           {/* Phone (click to dial) */}
